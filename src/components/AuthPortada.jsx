@@ -6,7 +6,7 @@ import {
   Loader2, Smartphone, Monitor
 } from 'lucide-react';
 
-const API_AUTH = (import.meta.env.VITE_API_URL || "http://localhost:3001") + "/api/auth';
+const API_AUTH = `${import.meta.env.VITE_API_URL || "http://localhost:3001"}/api/auth`;
 
 export default function AuthPortada({ onAutenticado, modoVista = 'desktop', onCambiarModoVista }) {
   const [vista, setVista] = useState('login'); // 'login' | 'registro' | 'recuperar'
