@@ -18,6 +18,7 @@ const pool = mysql.createPool({
   port: Number(process.env.DB_PORT) || 8889,
   waitForConnections: true,
   connectionLimit: 10,
+  ssl: { rejectUnauthorized: false },
 });
 
 const hashPassword = (pass) =>
