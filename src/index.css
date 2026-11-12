@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #07070e;
+    color: #f8fafc;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Scrollbar elegante */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07070e;
+}
+::-webkit-scrollbar-thumb {
+  background: #312e81;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+
+/* =========================================================
+   TEMAS VISUALES AIRYFIT - FONDOS COMPLETOS, BORDES Y TARJETAS
+   ========================================================= */
+
+/* 2. TEMA FUCSIA & ROSA STUDIO (Fondo ciruela/magenta profundo) */
+html[data-tema="rosa"],
+html[data-tema="rosa"] body,
+html[data-tema="rosa"] #root,
+html[data-tema="rosa"] main,
+html[data-tema="rosa"] [class*="bg-[#0"],
+html[data-tema="rosa"] [class*="bg-slate-9"],
+html[data-tema="rosa"] [class*="bg-gray-9"],
+html[data-tema="rosa"] [class*="bg-zinc-9"],
+html[data-tema="rosa"] [class*="bg-neutral-9"] {
+  background-color: #180616 !important;
+  background-image: none !important;
+}
+
+html[data-tema="rosa"] aside,
+html[data-tema="rosa"] header,
+html[data-tema="rosa"] nav,
+html[data-tema="rosa"] [class*="bg-[#1"],
+html[data-tema="rosa"] [class*="bg-indigo-9"],
+html[data-tema="rosa"] [class*="bg-violet-9"],
+html[data-tema="rosa"] [class*="bg-slate-8"] {
+  background-color: #280b25 !important;
+}
+
+html[data-tema="rosa"] [class*="border-"] {
+  border-color: rgba(244, 114, 182, 0.35) !important;
+}
+
+html[data-tema="rosa"] [class*="from-violet-"],
+html[data-tema="rosa"] [class*="from-indigo-"] {
+  --tw-gradient-from: #db2777 !important;
+}
+html[data-tema="rosa"] [class*="to-sky-"],
+html[data-tema="rosa"] [class*="to-indigo-"] {
+  --tw-gradient-to: #fb7185 !important;
+}
+html[data-tema="rosa"] .text-sky-400,
+html[data-tema="rosa"] .text-sky-300,
+html[data-tema="rosa"] .text-indigo-300,
+html[data-tema="rosa"] .text-violet-400 {
+  color: #f472b6 !important;
+}
+
+/* 3. TEMA ESMERALDA & MENTA PRO (Fondo verde bosque profundo) */
+html[data-tema="verde"],
+html[data-tema="verde"] body,
+html[data-tema="verde"] #root,
+html[data-tema="verde"] main,
+html[data-tema="verde"] [class*="bg-[#0"],
+html[data-tema="verde"] [class*="bg-slate-9"],
+html[data-tema="verde"] [class*="bg-gray-9"],
+html[data-tema="verde"] [class*="bg-zinc-9"],
+html[data-tema="verde"] [class*="bg-neutral-9"] {
+  background-color: #041711 !important;
+  background-image: none !important;
+}
+
+html[data-tema="verde"] aside,
+html[data-tema="verde"] header,
+html[data-tema="verde"] nav,
+html[data-tema="verde"] [class*="bg-[#1"],
+html[data-tema="verde"] [class*="bg-indigo-9"],
+html[data-tema="verde"] [class*="bg-violet-9"],
+html[data-tema="verde"] [class*="bg-slate-8"] {
+  background-color: #0a2920 !important;
+}
+
+html[data-tema="verde"] [class*="border-"] {
+  border-color: rgba(52, 211, 153, 0.35) !important;
+}
+
+html[data-tema="verde"] [class*="from-violet-"],
+html[data-tema="verde"] [class*="from-indigo-"] {
+  --tw-gradient-from: #059669 !important;
+}
+html[data-tema="verde"] [class*="to-sky-"],
+html[data-tema="verde"] [class*="to-indigo-"] {
+  --tw-gradient-to: #2dd4bf !important;
+}
+html[data-tema="verde"] .text-sky-400,
+html[data-tema="verde"] .text-sky-300,
+html[data-tema="verde"] .text-indigo-300,
+html[data-tema="verde"] .text-violet-400 {
+  color: #34d399 !important;
+}
+
+/* 4. MODO BLANCO / STUDIO LIGHT (Fondo blanco predominante y tarjetas limpias) */
+html[data-tema="blanco"],
+html[data-tema="blanco"] body,
+html[data-tema="blanco"] #root,
+html[data-tema="blanco"] main,
+html[data-tema="blanco"] [class*="bg-[#0"],
+html[data-tema="blanco"] [class*="bg-slate-9"],
+html[data-tema="blanco"] [class*="bg-gray-9"],
+html[data-tema="blanco"] [class*="bg-zinc-9"],
+html[data-tema="blanco"] [class*="bg-neutral-9"] {
+  background-color: #f4f6fb !important;
+  background-image: none !important;
+  color: #0f172a !important;
+}
+
+html[data-tema="blanco"] aside,
+html[data-tema="blanco"] header,
+html[data-tema="blanco"] nav,
+html[data-tema="blanco"] [class*="bg-[#1"],
+html[data-tema="blanco"] [class*="bg-indigo-9"],
+html[data-tema="blanco"] [class*="bg-violet-9"],
+html[data-tema="blanco"] [class*="bg-slate-8"] {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06) !important;
+}
+
+html[data-tema="blanco"] [class*="border-"] {
+  border-color: #dbe3f0 !important;
+}
+
+html[data-tema="blanco"] .text-white,
+html[data-tema="blanco"] .text-indigo-100,
+html[data-tema="blanco"] .text-indigo-200,
+html[data-tema="blanco"] .text-slate-100,
+html[data-tema="blanco"] .text-slate-200,
+html[data-tema="blanco"] .text-slate-300 {
+  color: #0f172a !important;
+}
+
+html[data-tema="blanco"] .text-slate-400,
+html[data-tema="blanco"] .text-slate-500,
+html[data-tema="blanco"] .text-indigo-300 {
+  color: #475569 !important;
+}
+
+html[data-tema="blanco"] .text-sky-300,
+html[data-tema="blanco"] .text-sky-400,
+html[data-tema="blanco"] .text-violet-400 {
+  color: #2563eb !important;
+}
+
+html[data-tema="blanco"] input,
+html[data-tema="blanco"] select,
+html[data-tema="blanco"] textarea {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Mantener texto blanco legible dentro de botones principales con degradado */
+html[data-tema="blanco"] button[class*="bg-gradient-to-"],
+html[data-tema="blanco"] button[class*="bg-gradient-to-"] *,
+html[data-tema="blanco"] .bg-emerald-500,
+html[data-tema="blanco"] .bg-emerald-500 * {
+  color: #ffffff !important;
+}
