@@ -150,9 +150,9 @@ export default function App() {
   
   useEffect(() => {
     Promise.all([
-      fetch("http://localhost:3001/api/ejercicios").then(r => r.ok ? r.json() : null).catch(() => null),
-      fetch("http://localhost:3001/api/rutinas").then(r => r.ok ? r.json() : null).catch(() => null),
-      fetch("http://localhost:3001/api/historial").then(r => r.ok ? r.json() : null).catch(() => null),
+      fetch((import.meta.env.VITE_API_URL || "http://localhost:3001") + "/api/ejercicios").then(r => r.ok ? r.json() : null).catch(() => null),
+      fetch((import.meta.env.VITE_API_URL || "http://localhost:3001") + "/api/rutinas").then(r => r.ok ? r.json() : null).catch(() => null),
+      fetch((import.meta.env.VITE_API_URL || "http://localhost:3001") + "/api/historial").then(r => r.ok ? r.json() : null).catch(() => null),
     ]).then(([ejsDB, rutsDB, histDB]) => {
       if (Array.isArray(ejsDB) && ejsDB.length > 0) setEjercicios(ejsDB);
       if (Array.isArray(rutsDB) && rutsDB.length > 0) setRutinas(rutsDB);
