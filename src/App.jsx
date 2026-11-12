@@ -228,9 +228,9 @@ export default function App() {
       const nuevoPerf = { ...perfil, nombre: cuenta.nombre, usuario: cuenta.usuario || perfil.usuario, foto: "" };
       setPerfil(nuevoPerf);
     }
-    const rutsDB = await fetch(`http://localhost:3001/api/rutinas/${uid}`).then(r => r.ok ? r.json() : []).catch(() => []);
+    const rutsDB = await fetch(`${import.meta.env.VITE_API_URL || "http://localhost:3001"}/api/rutinas/${uid}`).then(r => r.ok ? r.json() : []).catch(() => []);
     setRutinas(Array.isArray(rutsDB) ? rutsDB : []);
-    const histDB = await fetch(`http://localhost:3001/api/historial/${uid}`).then(r => r.ok ? r.json() : []).catch(() => []);
+    const histDB = await fetch(`${import.meta.env.VITE_API_URL || "http://localhost:3001"}/api/historial/${uid}`).then(r => r.ok ? r.json() : []).catch(() => []);
     setHistorial(Array.isArray(histDB) ? histDB : []);
   };
 
